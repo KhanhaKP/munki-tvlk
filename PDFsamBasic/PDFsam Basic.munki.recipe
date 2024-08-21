@@ -5,11 +5,6 @@
     <key>Description</key>
     <string>Downloads the latest version of PDFsam Basic and imports it into Munki.
 
-For the SUPPORTED_ARCH variable use
-
-- "arm64" for Apple Silicon
-- x86_64 for Intel
-
 </string>
     <key>Identifier</key>
     <string>com.github.munki-tvlk.munki.PDFsamBasic</string>
