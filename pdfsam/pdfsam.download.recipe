@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of PDFsam</string>
 	<key>Identifier</key>
-	<string>com.github.andrewvalentine.download.pdfsam</string>
+	<string>com.github.munki-tvlk.download.pdfsam</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
