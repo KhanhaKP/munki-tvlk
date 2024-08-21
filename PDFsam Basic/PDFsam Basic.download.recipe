@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of PDFsam Basic.</string>
 	<key>Identifier</key>
-	<string>com.github.opusmarketing.download.PDFsamBasic</string>
+	<string>com.github.munki-tvlk.download.PDFsamBasic</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -18,16 +18,17 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>asset_regex</key>
-				<string>.*\.dmg$</string>
-				<key>github_repo</key>
-				<string>torakiki/pdfsam</string>
-			</dict>
-			<key>Processor</key>
-			<string>GitHubReleasesInfoProvider</string>
-		</dict>
+        	<key>Arguments</key>
+        	<dict>
+          		<key>github_repo</key>
+          		<string>torakiki/pdfsam</string>
+          		<key>asset_regex</key>
+          		<string>(pdfsam-[0-9]+.[0-9]+.[0-9]+.dmg)</string>
+        	</dict>
+        		<key>Processor</key>
+        		<string>GitHubReleasesInfoProvider</string>
+      	</dict>
+
 		<dict>
 			<key>Arguments</key>
 			<dict>
