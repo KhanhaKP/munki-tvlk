@@ -64,6 +64,11 @@
                 - Developer ID Certification Authority
                 - Apple Root CA
                 </string>
+                <key>input_plist_path</key>
+				<string>%pathname%/Homebrew/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
 			</dict>
             <key>Processor</key>
             <string>Versioner</string>
