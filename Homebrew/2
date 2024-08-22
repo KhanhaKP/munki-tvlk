@@ -40,21 +40,22 @@
             <string>EndOfCheckPhase</string>
         </dict>
         <dict>
- <!--            <key>Arguments</key>
+           <key>Arguments</key>
             <dict>
                 <key>input_path</key>
-                <string>%pathname%/Homebrew.app</string>
-                <key>requirement</key>
+                <string>%pathname%/Homebrew</string>
+              <!--  <key>requirement</key>
                 <string>identifier "org.pdfsam.basic" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "8XM3GHX436"</string>
-			</dict>
--->
+			-->
+            </dict>
+
             <key>Processor</key>
             <string>CodeSignatureVerifier</string>
         </dict>
         <dict>
             <key>Arguments</key>
             <dict>
-			<!--	<key>input_path</key>
+			<!--<key>input_path</key>
                 <string>%pathname%</string>
 				<string>%pathname%/Homebrew.app/Contents/Info.plist</string>-->
 				<key>expected_authority_names</key>
