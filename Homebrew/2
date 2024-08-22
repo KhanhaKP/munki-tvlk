@@ -54,9 +54,9 @@
         <dict>
             <key>Arguments</key>
             <dict>
-				<key>input_path</key>
+			<!--	<key>input_path</key>
                 <string>%pathname%</string>
-			<!--	<string>%pathname%/Homebrew.app/Contents/Info.plist</string>-->
+				<string>%pathname%/Homebrew.app/Contents/Info.plist</string>-->
 				<key>expected_authority_names</key>
 				<string>
                 - "Developer ID Installer: Mike McQuaid (6248TWFRH6)"
