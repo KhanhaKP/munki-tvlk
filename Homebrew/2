@@ -69,11 +69,12 @@
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
- 		</dict>
-<!--           <key>Processor</key>
+            <key>Processor</key>
             <string>Versioner</string>
-        </dict>
-        -->
+ 		</dict>
+           
+    </dict>
+        
     </array>
 </dict>
 </plist>
