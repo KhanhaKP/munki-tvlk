@@ -5,19 +5,20 @@
     <key>Description</key>
     <string>Downloads the latest version of Lark.
 
-For the ARCH_TYPE variable use
+For Apple Silicon:
+ARCH: arm64, SUPPORTED_ARCHITECTURE: arm64
 
-- "arm64" for Apple Silicon
-- x64 for Intel
+For Intel:
+ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
 
 </string>
     <key>Identifier</key>
-    <string>com.github.munki-tvlk.download.Lark</string>
+    <string>com.github.munki-tvlk.download.Lark-Suite</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>Lark Suite(Apple)</string>
-        <key>ARCH_TYPE</key>
+        <key>ARCH</key>
         <string>arm64</string>
     </dict>
     <key>MinimumVersion</key>
