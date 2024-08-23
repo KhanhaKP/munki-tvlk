@@ -17,7 +17,7 @@ For the ARCH_TYPE variable use
     <dict>
         <key>NAME</key>
         <string>Lark (Apple)</string>
-        <key>c</key>
+        <key>ARCH_TYPE</key>
         <string>arm64</string>
     </dict>
     <key>MinimumVersion</key>
