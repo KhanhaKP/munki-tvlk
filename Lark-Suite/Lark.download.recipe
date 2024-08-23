@@ -5,13 +5,13 @@
     <key>Description</key>
     <string>Downloads the latest version of Lark.
 
-For Apple Silicon:
-ARCH: arm64, SUPPORTED_ARCHITECTURE: arm64
+    For Apple Silicon:
+    ARCH: arm64, SUPPORTED_ARCHITECTURE: arm64
 
-For Intel:
-ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
+    For Intel:
+    ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
 
-</string>
+    </string>
     <key>Identifier</key>
     <string>com.github.munki-tvlk.download.Lark-Suite</string>
     <key>Input</key>
@@ -20,6 +20,8 @@ ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
         <string>Lark Suite(Apple)</string>
         <key>ARCH</key>
         <string>arm64</string>
+        <key>pattern</key>
+        <string>href="(?P&lt;href&gt;\/dl.*?Lark-darwin_%ARCH%-(?P&lt;version&gt;.*?)\.dmg)"</string>
     </dict>
     <key>MinimumVersion</key>
     <string>2.3</string>
@@ -30,41 +32,28 @@ ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
             <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
-                <key>version</key>
-                <string>[0-9\.]+[0-9\.]+[0-9]</string>
-                <key>re_pattern</key>
-                <string>Lark-darwin_%ARCH%-%version%-signed.dmg</string>
-                <key>result_output_var_name</key>
-                <string>DOWNLOAD_VERSION</string>
                 <key>url</key>
-                <string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_arm64-7.24.5-signed.dmg</string>
-           </dict>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
+                <string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/</string>
+                <key>re_pattern</key>
+                <string>%pattern%</string>
+
                 <key>filename</key>
                 <string>%NAME%-%version%.dmg</string>
-                <key>url</key>
-                <string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/%re_pattern%</string>
             </dict>
+        </dict>
+        <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
-        </dict>
-<!--         <dict>
-       <dict>
             <key>Arguments</key>
             <dict>
-                <key>filename</key>
-                <string>%NAME%.dmg</string>
-            <key>url</key>
-				<string></string>
-                https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_x64-7.24.5-signed.dmg
+                <key>url</key>
+                <string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/%href%</string>
             </dict>
+        </dict>
+        <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
         </dict>
-        -->
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
