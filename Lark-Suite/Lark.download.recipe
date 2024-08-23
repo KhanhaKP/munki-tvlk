@@ -48,19 +48,20 @@ For the ARCH_TYPE variable use
             <key>Processor</key>
             <string>URLDownloader</string>
         </dict>
-        <dict>
-        <dict>
+<!--         <dict>
+       <dict>
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
-            <!--<key>url</key>
+            <key>url</key>
 				<string></string>
-                https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_x64-7.24.5-signed.dmg--> 
+                https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_x64-7.24.5-signed.dmg
             </dict>
             <key>Processor</key>
             <string>URLDownloader</string>
         </dict>
+        -->
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
