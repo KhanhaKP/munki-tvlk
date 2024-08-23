@@ -41,7 +41,7 @@ For the ARCH_TYPE variable use
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
                 <key>url</key>
-				<string>https://sf16.larksuitecdn.com/obj/lark-artifact-storage/*/Lark-darwin_%ARCH_TYPE%-[0-9]+.[0-9]+.[0-9]+-signed.dmg</string>
+				<string>https:\/\/sf16-va\.larksuitecdn\.com\/obj\/lark-artifact-storage\/[a-f0-9]{8}\/Lark-darwin_%ARCH_TYPE%-[\d.]+-signed\.dmg</string>
               <!--  https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_x64-7.24.5-signed.dmg--> 
             </dict>
             <key>Processor</key>
