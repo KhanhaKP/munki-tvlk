@@ -32,7 +32,7 @@ For the ARCH_TYPE variable use
 				<key>url</key>
 				<string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_%ARCH_TYPE%-7.24.5-signed.dmg</string>
 				<key>re_pattern</key>
-				<string>"macURL":"https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_%ARCH_TYPE%-[\d.]-signed.dmg"</string>
+				<string>"macURL":"https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_%ARCH_TYPE%-[0-9\.]+[0-9\.]+[0-9]-signed.dmg"</string>
 				<!--<string>"macURL":"(https:\/\/sf16-va\.larksuitecdn\.com\/obj\/lark-artifact-storage\/[a-f0-9]{8}\/Lark-darwin_%ARCH_TYPE%-[\d.]+-signed\.dmg)"</string>--> 
 				<key>result_output_var_name</key>
 				<string>url</string>
