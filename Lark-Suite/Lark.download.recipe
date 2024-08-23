@@ -39,7 +39,7 @@ For the ARCH_TYPE variable use
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
-                <string>%NAME%-%version%.dmg</string>
+                <string>%NAME%.dmg</string>
                 <key>url</key>
 				<string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_%ARCH_TYPE%-7.24.5-signed.dmg</string>
             </dict>
