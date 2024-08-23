@@ -34,8 +34,8 @@ For the ARCH_TYPE variable use
             </dict>
             <key>Processor</key>
             <string>GitHubReleasesInfoProvider</string>
--->        </dict>
-        <dict>
+       </dict>
+-->        <dict>
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
