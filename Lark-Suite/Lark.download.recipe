@@ -16,7 +16,7 @@ For the ARCH_TYPE variable use
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Lark (Apple)</string>
+        <string>Lark Suite(Apple)</string>
         <key>ARCH_TYPE</key>
         <string>arm64</string>
     </dict>
@@ -25,31 +25,31 @@ For the ARCH_TYPE variable use
     <key>Process</key>
     <array>
         <dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_%ARCH_TYPE%-7.24.5-signed.dmg</string>
-				<key>re_pattern</key>
-				<string>"macURL":"https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_%ARCH_TYPE%-[0-9\.]+[0-9\.]+[0-9]-signed.dmg"</string>
-				<!--<string>"macURL":"(https:\/\/sf16-va\.larksuitecdn\.com\/obj\/lark-artifact-storage\/[a-f0-9]{8}\/Lark-darwin_%ARCH_TYPE%-[\d.]+-signed\.dmg)"</string>--> 
-				<key>result_output_var_name</key>
-				<string>url</string>
-			</dict>
-		</dict>
-<!--        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
-                <key>asset_regex</key>
-                <string>Rancher\.Desktop-([0-9]+(\.[0-9]+)+)\.%ARCH_TYPE%\.dmg$</string>
-                <key>github_repo</key>
-                <string>rancher-sandbox/rancher-desktop</string>
+                <key>re_pattern</key>
+                <string>Lark-darwin_%ARCH_TYPE%-[0-9\.]+[0-9\.]+[0-9]-signed.dmg</string>
+                <key>result_output_var_name</key>
+                <string>DOWNLOAD_VERSION</string>
+                <key>url</key>
+                <string>https://www.larksuite.com/en_us/download</string>
+           </dict>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>filename</key>
+                <string>%NAME%-%DOWNLOAD_VERSION%.dmg</string>
+                <key>url</key>
+                <string>https://www.larksuite.com/en_us/download/Lark-darwin_%ARCH_TYPE%-%DOWNLOAD_VERSION%-signed.dmg</string>
             </dict>
             <key>Processor</key>
-            <string>GitHubReleasesInfoProvider</string>
-       </dict>
--->        <dict>
+            <string>URLDownloader</string>
+        </dict>
+        <dict>
+        <dict>
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
