@@ -24,6 +24,19 @@ For the ARCH_TYPE variable use
     <string>2.3</string>
     <key>Process</key>
     <array>
+        <dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage</string>
+				<key>re_pattern</key>
+				<string>"macURL":"(https:\/\/sf16-va\.larksuitecdn\.com\/obj\/lark-artifact-storage\/[a-f0-9]{8}\/Lark-darwin_%ARCH_TYPE%-[\d.]+-signed\.dmg)"</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
+			</dict>
+		</dict>
 <!--        <dict>
             <key>Arguments</key>
             <dict>
@@ -40,9 +53,9 @@ For the ARCH_TYPE variable use
             <dict>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
-                <key>url</key>
-				<string>https:\/\/sf16-va\.larksuitecdn\.com\/obj\/lark-artifact-storage\/[a-f0-9]{8}\/Lark-darwin_%ARCH_TYPE%-[\d.]+-signed\.dmg</string>
-              <!--  https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_x64-7.24.5-signed.dmg--> 
+            <!--    <key>url</key>
+				<string></string>
+                https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_x64-7.24.5-signed.dmg--> 
             </dict>
             <key>Processor</key>
             <string>URLDownloader</string>
