@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Rancher Desktop and imports it into Munki.
+    <string>Downloads the latest version of pgAdmin4 and imports it into Munki.
 
 For the SUPPORTED_ARCH variable use
 
