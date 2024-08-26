@@ -11,7 +11,7 @@
 
     </string>
     <key>Identifier</key>
-    <string>com.com.github.KhanhaKP.munki-tvlk.download.PGAdmin4</string>
+    <string>com.github.KhanhaKP.munki-tvlk.download.PGAdmin4</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -82,6 +82,17 @@
             </dict>
             <key>Processor</key>
             <string>CodeSignatureVerifier</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%pathname%/Rancher Desktop.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleShortVersionString</string>
+            </dict>
+            <key>Processor</key>
+            <string>Versioner</string>
         </dict>
     </array>
 </dict>
