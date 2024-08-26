@@ -52,7 +52,6 @@ For the SUPPORTED_ARCH variable use
     <key>Process</key>
     <array>
         <dict>
-
             <key>Processor</key>
             <string>MunkiImporter</string>
             <key>Arguments</key>
