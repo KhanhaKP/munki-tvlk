@@ -20,8 +20,6 @@
         <string>Lark Suite(Apple)</string>
         <key>ARCH</key>
         <string>arm64</string>
-        <key>pattern</key>
-        <string>href="(?P&lt;href&gt;\/dl.*?Lark-darwin_%ARCH%-(?P&lt;version&gt;.*?)\.dmg)"</string>
     </dict>
     <key>MinimumVersion</key>
     <string>2.3</string>
@@ -33,12 +31,11 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/</string>
+                <string>https://www.larksuite.com/en_us/download</string>
                 <key>re_pattern</key>
-                <string>%pattern%</string>
-
-                <key>filename</key>
-                <string>%NAME%-%version%.dmg</string>
+                <string>https://www.larksuite.com/en_us/downloadhttps://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/*/Lark-darwin_%ARCH%-([\d\.])-signed.dmg</string>
+				<key>result_output_var_name</key>
+				<string>version</string>
             </dict>
         </dict>
         <dict>
@@ -47,7 +44,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/%href%</string>
+                <string>https://www.larksuite.com/en_us/download./sf16-va.larksuitecdn.com/obj/lark-artifact-storage/61070088/Lark-darwin_%ARCH%-%version%-signed.dmg</string>
             </dict>
         </dict>
         <dict>
@@ -61,6 +58,8 @@
         <dict>
             <key>Arguments</key>
             <dict>
+                <key>filename</key>
+                <string>%NAME%-%version%.dmg</string>
                 <key>input_path</key>
                 <string>%pathname%/LarkSuite.app</string>
                 <key>requirement</key>
