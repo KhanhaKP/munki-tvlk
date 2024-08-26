@@ -3,7 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Lark.</string>
+	<string>Downloads the latest version of Lark.
+	For Apple Silicon:
+    ARCH: arm64, SUPPORTED_ARCHITECTURE: arm64
+
+    For Intel:
+    ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
+	</string>
 	<key>Identifier</key>
 	<string>com.github.KhanhaKP.munki-tvlk.download.Lark-Suite</string>
 	<key>Input</key>
@@ -12,6 +18,10 @@
 		<string>LarkSuite</string>
 		<key>NAME</key>
 		<string>Lark Suite(Intel)</string>
+		<key>ARCH</key>
+        <string>x64</string>
+		<key>version</key>
+        <string>7.24.5</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -21,9 +31,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>%NAME%_%version%.dmg</string>
 				<key>url</key>
-				<string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_x64-7.24.5-signed.dmg</string>
+				<string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4711b6fd/Lark-darwin_%ARCH%-%version%-signed.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
