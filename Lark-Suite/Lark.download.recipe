@@ -31,7 +31,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://www.larksuite.com/en_us/download</string>
+                <string>https://www.larksuite.com/en_us/download/</string>
                 <key>re_pattern</key>
                 <string>href=\"(https://sf16-va\.larksuitecdn\.com/obj/lark-artifact-storage/*/)\">pg</string>
             </dict>
