@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Amazon Q and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>https://github.com/gentatvlk/munki-tvlk.git.munki.AmazonQ</string>
+	<string>com.github.munki-tvlk.download.AmazonQ</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>https://github.com/gentatvlk/munki-tvlk.git.download.AmazonQ</string>
+	<string>com.github.munki-tvlk.download.AmazonQ</string>
 	<key>Process</key>
 	<array>
 		<dict>
