@@ -61,7 +61,7 @@
         <dict>
             <key>Arguments</key>
             <dict>
-				<key>input_plist_path</key>
+            	<key>input_plist_path</key>
 				<string>%pathname%/Appium Inspector.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
