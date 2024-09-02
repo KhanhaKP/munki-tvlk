@@ -10,8 +10,9 @@
         For Intel:
         ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
     </string>
+
     <key>Identifier</key>
-    <string>com.github.munki-tvlk.download.Appium-Inspector</string>
+    <string>com.github.KhanhaKP.munki-tvlk.download.Appium-Inspector</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -20,7 +21,7 @@
         <string>arm64</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>1.0.0</string>
+    <string>2.3.0</string>
     <key>Process</key>
     <array>
         <dict>
