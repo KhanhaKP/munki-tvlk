@@ -8,11 +8,10 @@
         ARCH: arm64, SUPPORTED_ARCHITECTURE: arm64
 
         For Intel:
-        ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
+        ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64</string>
 
-</string>
     <key>Identifier</key>
-    <string>com.github.munki-tvlk.munki.Appium-Inspector</string>
+    <string>com.github.KhanhaKP.munki-tvlk.munki.Appium-Inspector</string>
     <key>Input</key>
     <dict>
         <key>MUNKI_REPO_SUBDIR</key>
@@ -32,7 +31,7 @@
 			<key>developer</key>
 			<string>OpenJS Foundation, Inc.</string>
 			<key>display_name</key>
-			<string>%NAME%</string>
+			<string>Appium Inspector(Apple)</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>supported_architectures</key>
