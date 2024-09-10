@@ -12,7 +12,7 @@
     </string>
 
     <key>Identifier</key>
-    <string>com.github.KhanhaKP.munki-tvlk.download.Appium-Inspector</string>
+    <string>com.github.munki-tvlk.download.Appium-Inspector</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
