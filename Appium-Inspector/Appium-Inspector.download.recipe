@@ -10,7 +10,6 @@
         For Intel:
         ARCH: x64, SUPPORTED_ARCHITECTURE: x86_64
     </string>
-
     <key>Identifier</key>
     <string>com.github.munki-tvlk.download.Appium-Inspector</string>
     <key>Input</key>
