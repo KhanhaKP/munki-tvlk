@@ -46,7 +46,7 @@
         </dict>
     </dict>
     <key>MinimumVersion</key>
-    <string>2.3.0</string>
+    <string>2.3</string>
     <key>ParentRecipe</key>
     <string>com.github.munki-tvlk.munki.Appium-Inspector</string>
     <key>Process</key>
