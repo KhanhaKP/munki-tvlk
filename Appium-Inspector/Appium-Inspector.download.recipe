@@ -21,7 +21,7 @@
         <string>arm64</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>2.3.0</string>
+    <string>2.3</string>
     <key>Process</key>
     <array>
         <dict>
