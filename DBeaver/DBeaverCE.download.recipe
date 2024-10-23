@@ -10,15 +10,6 @@
     <dict>
         <key>NAME</key>
         <string>DBeaver Community (Apple)</string>
-        
-<!--SELECT YOUR OS VERSION AND USE IT IN YOUR OVERRIDE
-	"installer" for MAC OS X Pkg installer
-	"macos-x86_64" for macOS x86_64 DMG
-	"macos-aarch64" for macOS arm64 M1 DMG
-	"linux.gtk.x86" for LINUX 32bit
-	"linux.gtk.x86_64" for LINUX 64bit
--->
-
 		<key>os</key>
 		<string>macos-aarch64</string>
     </dict>
