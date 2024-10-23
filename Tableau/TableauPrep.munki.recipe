@@ -43,7 +43,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.munki-tvlk.download.tableauprep</string>
+	<string>com.github.munki-tvlk.download.TableauPrep</string>
 	<key>Process</key>
 	<array>
 		<dict>
