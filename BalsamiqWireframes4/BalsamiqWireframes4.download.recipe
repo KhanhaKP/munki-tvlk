@@ -5,11 +5,11 @@
     <key>Description</key>
     <string>Downloads the latest version of Balsamiq Wireframes 4.</string>
     <key>Identifier</key>
-    <string>com.github.dataJAR-recipes.download.Balsamiq Wireframes 4</string>
+    <string>com.github.munki-tvlk.download.BalsamiqWireframes4</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>BalsamiqWireframes4</string>
+        <string>Balsamiq Wireframes 4</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
