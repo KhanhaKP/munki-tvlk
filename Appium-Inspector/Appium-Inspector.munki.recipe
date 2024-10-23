@@ -45,7 +45,7 @@
     <key>MinimumVersion</key>
     <string>2.3</string>
     <key>ParentRecipe</key>
-    <string>com.github.munki-tvlk.munki.Appium-Inspector</string>
+    <string>com.github.munki-tvlk.download.Appium-Inspector</string>
     <key>Process</key>
     <array>
         <dict>
