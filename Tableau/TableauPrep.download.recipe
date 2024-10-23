@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest Tableau Desktop disk image.</string>
 	<key>Identifier</key>
-	<string>com.github.munki-tvlk.download.tableauprep</string>
+	<string>com.github.munki-tvlk.download.TableauPrep</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
