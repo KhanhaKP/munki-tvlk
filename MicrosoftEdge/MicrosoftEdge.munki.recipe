@@ -11,9 +11,9 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>MicrosoftEdge</string>
+        <string>Microsoft Edge</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/Microsoft</string>
+        <string>apps/%NAME%</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
