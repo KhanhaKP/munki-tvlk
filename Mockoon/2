@@ -6,7 +6,7 @@
     <string>Downloads the latest version of PDFsam Basic.
 </string>
     <key>Identifier</key>
-    <string>com.github.munki-tvlk.download.Mockoon</string>
+    <string>com.github.munki-tvlk.2</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
