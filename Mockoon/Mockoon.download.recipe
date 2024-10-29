@@ -15,14 +15,23 @@
 	<string>2.3</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
-				<key>url</key>
-				<string>https://objects.githubusercontent.com/github-production-release-asset-2e65be/97478419/cdb5f8d3-5c5c-4dcf-a122-8f8395ad69cb?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=releaseassetproduction%2F20241029%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241029T035821Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=96877d586435a98611f1eb82bff33f768cda4b61da9c11799704220bfc78d9ce&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3B%20filename%3Dmockoon.setup.9.0.0.arm64.dmg&amp;response-content-type=application%2Foctet-stream</string>
-			</dict>
+<dict>
+            <key>Arguments</key>
+            <dict>
+                <key>asset_regex</key>
+                <string>mockoon.setup-[0-9]+.[0-9]+.[0-9]+.arm64+.dmg</string>
+                <key>github_repo</key>
+                <string>mockoon/mockoon</string>
+            </dict>
+            <key>Processor</key>
+            <string>GitHubReleasesInfoProvider</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>filename</key>
+                <string>%NAME%-%version%.dmg</string>
+            </dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
