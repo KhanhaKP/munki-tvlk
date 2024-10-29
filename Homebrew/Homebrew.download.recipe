@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Homebrew.</string>
     <key>Identifier</key>
-    <string><com class="github munki-tvlk download Homebrew"></com></string>
+    <string>com.github.munki-tvlk.download.Homebrew</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
