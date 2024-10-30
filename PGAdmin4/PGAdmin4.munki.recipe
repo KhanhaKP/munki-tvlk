@@ -12,7 +12,7 @@ For the SUPPORTED_ARCH variable use
 
 </string>
     <key>Identifier</key>
-    <string>com.github.KhanhaKP.munki-tvlk.download.PGAdmin4</string>
+    <string>com.github.munki-tvlk.munki.PGAdmin4</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -48,7 +48,7 @@ For the SUPPORTED_ARCH variable use
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.KhanhaKP.munki-tvlk.download.PGAdmin4</string>
+    <string>com.github.munki-tvlk.download.PGAdmin4</string>
     <key>Process</key>
     <array>
         <dict>
