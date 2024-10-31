@@ -19,6 +19,8 @@
     <key>Process</key>
     <array>
         <dict>
+            <key>Processor</key>
+            <string>GitHubReleasesInfoProvider</string>
             <key>Arguments</key>
             <dict>
                 <key>asset_regex</key>
@@ -26,8 +28,6 @@
                 <key>github_repo</key>
                 <string>koush/vysor.io</string>
             </dict>
-            <key>Processor</key>
-            <string>GitHubReleasesInfoProvider</string>
         </dict>
         <dict>
             <key>Processor</key>
