@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current installation package for FileZilla. Imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.munki-tvlk.munki.FileZillax86</string>
+	<string>com.github.munki-tvlk.munki.FileZilla</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -33,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>	
-	<string>com.github.munki-tvlk.download.FileZillax86</string>
+	<string>com.github.munki-tvlk.download.FileZilla</string>
 	<key>Process</key>
 	<array>
 		<dict>
