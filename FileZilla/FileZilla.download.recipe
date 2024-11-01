@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current version of FileZilla. Specify the channel via %NAME%.</string>
 	<key>Identifier</key>
-	<string>com.github.munki-tvlk.download.FileZillax86</string>
+	<string>com.github.munki-tvlk.download.FileZilla</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
