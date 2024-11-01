@@ -11,7 +11,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/FileZilla</string>
 		<key>NAME</key>
-		<string>FileZilla (Intel)</string>
+		<string>FileZilla(Intel)</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,7 +21,7 @@
 			<key>description</key>
 			<string>FileZilla is a fast and reliable cross-platform FTP, FTPS and SFTP client.</string>
 			<key>display_name</key>
-			<string>FileZilla (Intel)</string>
+			<string>FileZilla(Intel)</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
