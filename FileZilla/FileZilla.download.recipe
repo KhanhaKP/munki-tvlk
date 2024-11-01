@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads the current version of FileZilla. Specify the channel via %NAME%.</string>
 	<key>Identifier</key>
-	<string>com.github.munki-tvlk.download.FileZilla</string>
+	<string>com.github.munki-tvlk.download.FileZillax86</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>FileZilla</string>
+		<string>FileZilla (Apple)</string>
 		<key>RE_PATTERN</key>
-		<string>&lt;a href=\"(?P&lt;url&gt;http[s]?.*?(?P&lt;filename&gt;FileZilla_(?P&lt;version&gt;[\d.]+)_macos-x86.*?\.tar\.bz2).*?)\"</string>
+		<string>&lt;a href=\"(?P&lt;url&gt;http[s]?.*?(?P&lt;filename&gt;FileZilla_(?P&lt;version&gt;[\d.]+)_macos-arm64.*?\.tar\.bz2).*?)\"</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
