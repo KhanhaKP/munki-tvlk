@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>FileZilla (Apple)</string>
+		<string>FileZilla(Apple)</string>
 		<key>RE_PATTERN</key>
 		<string>&lt;a href=\"(?P&lt;url&gt;http[s]?.*?(?P&lt;filename&gt;FileZilla_(?P&lt;version&gt;[\d.]+)_macos-arm64.*?\.tar\.bz2).*?)\"</string>
 	</dict>
