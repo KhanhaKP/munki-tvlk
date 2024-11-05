@@ -9,17 +9,9 @@
       <key>Input</key>
       <dict>
          <key>NAME</key>
-         <string>Microsoft Office 365 Business Pro Suite</string>
+         <string>Microsoft Office 365</string>
          <key>VENDOR</key>
          <string>Microsoft</string>
-         <key>SOFTWARETITLE1</key>
-         <string>Office</string>
-         <key>SOFTWARETITLE2</key>
-         <string>Business</string>
-         <key>SOFTWARETITLE3</key>
-         <string>Pro</string>
-         <key>SOFTWARETITLE4</key>
-         <string>Suite</string>
          <key>ID</key>
          <string>2009112</string>
          <key>DOWNLOAD_URL_BASE</key>
@@ -50,7 +42,7 @@
                <key>url</key>
                <string>%DOWNLOAD_URL_BASE%%ID%</string>
                <key>filename</key>
-               <string>%VENDOR%_%SOFTWARETITLE1%_%SOFTWARETITLE2%_%SOFTWARETITLE3%_%SOFTWARETITLE4%_%version%.pkg</string>
+               <string>%NAME%_%version%.pkg</string>
             </dict>
          </dict>
          <dict>
