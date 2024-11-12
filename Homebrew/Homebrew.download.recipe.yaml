@@ -16,8 +16,8 @@ Process:
   - Processor: EndOfCheckPhase
 
   - Processor: CodeSignatureVerifier
-    Arguments:
-      input_path: "%pathname%"
+  Arguments:
+    input_path: "/Library/AutoPkg/Cache/com.github.munki-tvlk.munki.Homebrew/downloads/*/Homebrew"
       expected_authority_names: 
         - "Developer ID Installer: Patrick Linnane (927JGANW46)"
         - Developer ID Certification Authority
