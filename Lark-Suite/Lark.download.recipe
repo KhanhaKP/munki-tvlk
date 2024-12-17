@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Lark.</string>
 	<key>Identifier</key>
@@ -11,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
-		<string>LarkSuite</string>
+		<string>LarkSuite (Apple)</string>
 		<key>NAME</key>
 		<string>Lark</string>
 	</dict>
@@ -22,10 +20,21 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>url</key>
+				<string>https://www.larksuite.com/hc/en-US/category/7054521562770210822-version-updates</string>
+				<key>re_pattern</key>
+				<string>https://.*?Lark-darwin_arm64-.*?-signed\.dmg</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/4c4056c9/Lark-darwin_arm64-7.32.9-signed.dmg</string>
+				<string>%found_url%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
