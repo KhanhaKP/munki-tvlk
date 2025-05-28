@@ -14,56 +14,47 @@
     <key>MinimumVersion</key>
     <string>2.3.0</string>
     <key>Process</key>
- <array>
-    <!-- Ambil info release GitHub -->
-    <dict>
-        <key>Processor</key>
-        <string>GitHubReleasesInfoProvider</string>
-        <key>Arguments</key>
+    <array>
+        <!-- Ambil info release GitHub -->
         <dict>
-            <key>github_repo</key>
-            <string>Homebrew/brew</string>
-            <key>asset_regex</key>
-            <string>Homebrew-[0-9]+\.[0-9]+\.[0-9]+\.pkg</string>
+            <key>Processor</key>
+            <string>GitHubReleasesInfoProvider</string>
+            <key>Arguments</key>
+            <dict>
+                <key>github_repo</key>
+                <string>Homebrew/brew</string>
+                <key>asset_regex</key>
+                <string>Homebrew-[0-9]+\.[0-9]+\.[0-9]+\.pkg</string>
+            </dict>
         </dict>
-    </dict>
 
-    <!-- Download file ZIP dengan nama *.pkg.zip -->
-    <dict>
-        <key>Processor</key>
-        <string>URLDownloader</string>
-        <key>Arguments</key>
+        <!-- Download file .pkg -->
         <dict>
-            <key>filename</key>
-            <string>%NAME%-%version%.pkg</string>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>filename</key>
+                <string>%NAME%-%version%.pkg</string>
+            </dict>
         </dict>
-    </dict>
 
-    <!-- Extract ZIP jadi folder .pkg -->
-    <dict>
+        <!-- Verifikasi signature -->
         <dict>
-            <key>archive_path</key>
-            <string>%pathname%</string>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%</string>
+                <key>expected_authority_names</key>
+                <array>
+                    <string>Developer ID Installer: Mike McQuaid (6248TWFRH6)</string>
+                    <string>Developer ID Certification Authority</string>
+                    <string>Apple Root CA</string>
+                </array>
+            </dict>
         </dict>
-    </dict>
-    
-    <!-- Verifikasi signature, path ke folder hasil ekstrak (.pkg) -->
-    <dict>
-        <key>Processor</key>
-        <string>CodeSignatureVerifier</string>
-        <key>Arguments</key>
-        <dict>
-            <!-- Sesuaikan ini dengan nama folder .pkg yang ada di hasil ekstrak -->
-            <key>input_path</key>
-            <string>%pathname%/Homebrew.pkg</string>
-            <key>expected_authority_names</key>
-            <array>
-                <string>Developer ID Installer: Mike McQuaid (6248TWFRH6)</string>
-                <string>Developer ID Certification Authority</string>
-                <string>Apple Root CA</string>
-            </array>
-        </dict>
-    </dict>
-</array>
+    </array>
 </dict>
 </plist>
