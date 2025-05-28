@@ -14,60 +14,59 @@
     <key>MinimumVersion</key>
     <string>2.3.0</string>
     <key>Process</key>
-    <array>
+ <array>
+    <!-- Ambil info release GitHub -->
+    <dict>
+        <key>Processor</key>
+        <string>GitHubReleasesInfoProvider</string>
+        <key>Arguments</key>
         <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>asset_regex</key>
-                <string>Homebrew-[0-9]+.[0-9]+.[0-9]+.pkg</string>
-                <key>github_repo</key>
-                <string>Homebrew/brew</string>
-            </dict>
-            <key>Processor</key>
-            <string>GitHubReleasesInfoProvider</string>
+            <key>github_repo</key>
+            <string>Homebrew/brew</string>
+            <key>asset_regex</key>
+            <string>Homebrew-[0-9]+\.[0-9]+\.[0-9]+\.pkg\.zip</string>
         </dict>
+    </dict>
+
+    <!-- Download file ZIP dengan nama *.pkg.zip -->
+    <dict>
+        <key>Processor</key>
+        <string>URLDownloader</string>
+        <key>Arguments</key>
         <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>filename</key>
-                <string>%NAME%-%version%.pkg</string>
-            </dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
+            <key>filename</key>
+            <string>%NAME%-%version%.pkg.zip</string>
         </dict>
+    </dict>
+
+    <!-- Extract ZIP jadi folder .pkg -->
+    <dict>
+        <key>Processor</key>
+        <string>Unarchiver</string>
+        <key>Arguments</key>
         <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
+            <key>archive_path</key>
+            <string>%pathname%</string>
         </dict>
+    </dict>
+    
+    <!-- Verifikasi signature, path ke folder hasil ekstrak (.pkg) -->
+    <dict>
+        <key>Processor</key>
+        <string>CodeSignatureVerifier</string>
+        <key>Arguments</key>
         <dict>
-           <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%/Homebrew</string>
-             </dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
+            <!-- Sesuaikan ini dengan nama folder .pkg yang ada di hasil ekstrak -->
+            <key>input_path</key>
+            <string>%pathname%/Homebrew.pkg</string>
+            <key>expected_authority_names</key>
+            <array>
+                <string>Developer ID Installer: Mike McQuaid (6248TWFRH6)</string>
+                <string>Developer ID Certification Authority</string>
+                <string>Apple Root CA</string>
+            </array>
         </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-			<!--<key>input_path</key>
-                <string>%pathname%</string>
-				<string>%pathname%/Homebrew.app/Contents/Info.plist</string>-->
-				<key>expected_authority_names</key>
-				<string>
-                - "Developer ID Installer: Mike McQuaid (6248TWFRH6)"
-                - Developer ID Certification Authority
-                - Apple Root CA
-                </string>
-                <key>input_plist_path</key>
-				<string>%pathname%/Homebrew/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleShortVersionString</string>
-			</dict>
-            <key>Processor</key>
-            <string>Versioner</string>
- 		</dict>
-    </array>
+    </dict>
+</array>
 </dict>
 </plist>
