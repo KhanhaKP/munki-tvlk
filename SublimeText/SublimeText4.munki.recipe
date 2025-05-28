@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Sublime Text 4 and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.munki-tvlk.SublimeText.SublimeText4.munki</string>
+	<string>com.github.munki-tvlk.munki.SublimeText4</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -28,25 +28,51 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>unattended_uninstall</key>
+            <true/>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.munki-tvlk.SublimeText.SublimeText4.download</string>
+	<string>com.github.munki-tvlk.download.SublimeText4</string>
 	<key>Process</key>
 	<array>
+		 <dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/Sublime Text.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleVersion</string>
+            </dict>
+        </dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_path</key>
-				<string>%pathname%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
-			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
-		</dict>
+            <key>Arguments</key>
+            <dict>
+                <key>dmg_root</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <key>dmg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.dmg</string>
+            </dict>
+            <key>Processor</key>
+            <string>DmgCreator</string>
+        </dict>
+         <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%dmg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>version_comparison_key</key>
+                <string>CFBundleVersion</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
 	</array>
 </dict>
 </plist>
