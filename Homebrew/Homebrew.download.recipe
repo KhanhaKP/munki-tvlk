@@ -24,7 +24,7 @@
             <key>github_repo</key>
             <string>Homebrew/brew</string>
             <key>asset_regex</key>
-            <string>Homebrew-[0-9]+\.[0-9]+\.[0-9]+\.pkg\.zip</string>
+            <string>Homebrew-[0-9]+\.[0-9]+\.[0-9]+\.pkg</string>
         </dict>
     </dict>
 
