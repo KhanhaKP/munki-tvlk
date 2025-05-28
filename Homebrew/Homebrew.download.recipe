@@ -35,15 +35,12 @@
         <key>Arguments</key>
         <dict>
             <key>filename</key>
-            <string>%NAME%-%version%.pkg.zip</string>
+            <string>%NAME%-%version%.pkg</string>
         </dict>
     </dict>
 
     <!-- Extract ZIP jadi folder .pkg -->
     <dict>
-        <key>Processor</key>
-        <string>Unarchiver</string>
-        <key>Arguments</key>
         <dict>
             <key>archive_path</key>
             <string>%pathname%</string>
