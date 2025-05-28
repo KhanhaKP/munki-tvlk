@@ -17,7 +17,7 @@ Process:
 
   - Processor: CodeSignatureVerifier
     Arguments:
-      input_path: "%pathname%/Homebrew/Contents/Info.plist"
+      input_path: "%pathname%"
       expected_authority_names: 
         - "Developer ID Installer: Patrick Linnane (927JGANW46)"
         - Developer ID Certification Authority
