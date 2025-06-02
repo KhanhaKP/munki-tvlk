@@ -8,7 +8,7 @@
 For Intel use: "x86_64" in the ARCH_TYPE variable
 For Apple Silicon use: "arm64" in the ARCH_TYPE variable</string>
     <key>Identifier</key>
-    <string>com.github.munki-tvlk.download.PGAdmin4</string>
+    <string>com.github.munki-tvlk.download.PGAdmin4x86</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
