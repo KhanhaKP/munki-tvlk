@@ -46,7 +46,7 @@ done
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.wholtz.pkg.PostgreSQL</string>
+    <string>com.github.munki-tvlk.pkg.PostgreSQL</string>
     <key>Process</key>
     <array>
         <dict>
