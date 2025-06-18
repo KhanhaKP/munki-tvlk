@@ -21,9 +21,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.larksuite.com/hc/en-US/category/7054521562770210822-version-updates</string>
+				<string>https://www.larksuite.com/download</string>
 				<key>re_pattern</key>
-				<string>https://.*?Lark-darwin_arm64-.*?-signed\.dmg</string>
+				<string>https://sf[^"]+Lark-darwin_arm64[^"]+signed\.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
