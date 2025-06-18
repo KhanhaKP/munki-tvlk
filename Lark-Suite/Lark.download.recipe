@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Lark.</string>
 	<key>Identifier</key>
-	<string>com.github.KhanhaKP.munki-tvlk.download.Lark</string>
+	<string>com.github.munki-tvlk.download.Lark</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
