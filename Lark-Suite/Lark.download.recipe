@@ -2,70 +2,93 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Description</key>
-	<string>Downloads the latest version of Lark.</string>
-	<key>Identifier</key>
-	<string>com.github.munki-tvlk.download.Lark</string>
-	<key>Input</key>
-	<dict>
-		<key>APP_FILENAME</key>
-		<string>LarkSuite (Apple)</string>
-		<key>NAME</key>
-		<string>Lark</string>
-	</dict>
-	<key>MinimumVersion</key>
-	<string>2.3</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>https://www.larksuite.com/en_us/download</string>
-				<key>re_pattern</key>
-				<string>https://sf[^"]+Lark-darwin_arm64[^"]+signed\.dmg</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-		</dict>
+    <key>Description</key>
+    <string>Downloads the latest version of Lark.</string>
+    <key>Identifier</key>
+    <string>com.github.munki-tvlk.download.Lark</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Lark</string>
+        <key>APP_FILENAME</key>
+        <string>LarkSuite</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>2.3</string>
+    <key>Process</key>
+    <array>
+        <!-- PythonScript to dynamically extract the download URL -->
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>script</key>
+                <string>
+import re
+import subprocess
 
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
-				<key>url</key>
-				<string>%found_url%</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_path</key>
-				<string>%pathname%/LarkSuite.app</string>
-				<key>requirement</key>
-				<string>identifier "com.larksuite.larkApp" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = JBRN9C6V7T</string>
-			</dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%pathname%/LarkSuite.app/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleVersion</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-		</dict>
-	</array>
+# Fetch HTML content
+html = subprocess.check_output(["curl", "-sL", "https://www.larksuite.com/"], text=True)
+
+# Regex pattern for the dmg URL
+pattern = r'https://sf\d+-sg\.larksuitecdn\.com/obj/lark-artifact-storage/[^"]+/Lark-darwin_arm64-[^"]+-signed\.dmg'
+match = re.search(pattern, html)
+
+if not match:
+    raise Exception("Lark DMG URL not found")
+
+found_url = match.group(0)
+print(f"Found URL: {found_url}")
+env["found_url"] = found_url
+                </string>
+            </dict>
+            <key>Processor</key>
+            <string>PythonScript</string>
+        </dict>
+
+        <!-- Download DMG file -->
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>filename</key>
+                <string>%NAME%.dmg</string>
+                <key>url</key>
+                <string>%found_url%</string>
+            </dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+        </dict>
+
+        <!-- Check phase end -->
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+
+        <!-- Code signature verification -->
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/LarkSuite.app</string>
+                <key>requirement</key>
+                <string>identifier "com.larksuite.larkApp" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] and certificate leaf[field.1.2.840.113635.100.6.1.13] and certificate leaf[subject.OU] = JBRN9C6V7T</string>
+            </dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+        </dict>
+
+        <!-- Extract version -->
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%pathname%/LarkSuite.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleVersion</string>
+            </dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+        </dict>
+    </array>
 </dict>
 </plist>
